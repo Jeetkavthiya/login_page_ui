@@ -1,3 +1,4 @@
+import 'package:LoginPage/pages/welcome_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,12 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'Flutter Login Page',
       theme: ThemeData(
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: MyHomePage(title: 'Flutter Login Page'),
     );
   }
 }
@@ -28,18 +30,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
-  Widget build(BuildContext context) {return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            
-          ],
-        ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
+  Widget build(BuildContext context) {
+    return WelcomePage();
   }
 }
